@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name" translatable="false">You tube clone</string>
+    <string name="title_home" translatable="false">Home</string>
+    <string name="title_subscriptions" translatable="false">Shorts</string>
+    <string name="title_library" translatable="false">Subscriptions</string>
+    <string name="title_download" translatable="false">You</string>
+
+</resources>

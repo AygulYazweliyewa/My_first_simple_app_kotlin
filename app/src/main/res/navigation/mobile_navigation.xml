@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.beletvideoexample.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_subscription"
+            app:destination="@id/navigation_subscription" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_library"
+            app:destination="@id/navigation_library" />
+        <action
+            android:id="@+id/action_navigation_home_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_mySubscribersFragment"
+            app:destination="@id/mySubscribersFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_library"
+        android:name="com.example.beletvideoexample.ui.library.LibraryFragment"
+        android:label="@string/title_library"
+        tools:layout="@layout/fragment_library">
+        <action
+            android:id="@+id/action_navigation_library_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_library_to_playerFragment"
+            app:destination="@id/playerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_subscription"
+        android:name="com.example.beletvideoexample.ui.subscription.SubscriptionFragment"
+        android:label="@string/title_subscriptions"
+        tools:layout="@layout/fragment_subscription">
+        <action
+            android:id="@+id/action_navigation_subscription_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_subscription_to_navigation_home2"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_download"
+        android:name="com.example.beletvideoexample.ui.download.DownloadFragment"
+        android:label="@string/title_download"
+        tools:layout="@layout/fragment_download">
+        <action
+            android:id="@+id/action_navigation_download_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_navigation_download_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_navigation_download_to_viewAllFragment"
+            app:destination="@id/viewAllFragment" />
+        <action
+            android:id="@+id/action_navigation_download_to_mySubscribersFragment"
+            app:destination="@id/mySubscribersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.beletvideoexample.ui.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_searchFragment_to_navigation_download"
+            app:destination="@id/navigation_download" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.beletvideoexample.ui.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_settingsFragment_to_navigation_download"
+            app:destination="@id/navigation_download" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewAllFragment"
+        android:name="com.example.beletvideoexample.ui.download.ViewAllFragment"
+        android:label="fragment_view_all"
+        tools:layout="@layout/fragment_view_all" >
+        <action
+            android:id="@+id/action_viewAllFragment_to_navigation_download"
+            app:destination="@id/navigation_download" />
+    </fragment>
+    <fragment
+        android:id="@+id/mySubscribersFragment"
+        android:name="com.example.beletvideoexample.ui.subscription.MySubscribersFragment"
+        android:label="fragment_my_subscribers"
+        tools:layout="@layout/fragment_my_subscribers" >
+        <action
+            android:id="@+id/action_mySubscribersFragment_to_navigation_download"
+            app:destination="@id/navigation_download" />
+        <action
+            android:id="@+id/action_mySubscribersFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/playerFragment"
+        android:name="com.example.beletvideoexample.ui.PlayerFragment"
+        android:label="fragment_player"
+        tools:layout="@layout/fragment_player" >
+        <action
+            android:id="@+id/action_playerFragment_to_navigation_library"
+            app:destination="@id/navigation_library" />
+    </fragment>
+</navigation>

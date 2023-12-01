@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/home_icon"
+        android:title="@string/title_home"
+        android:orderInCategory="1"/>
+    <item
+        android:id="@+id/navigation_subscription"
+        android:icon="@drawable/youtube_shorts"
+        android:title="@string/title_subscriptions"
+        android:orderInCategory="2"/>
+
+<item
+    android:id="@+id/navigation_add"
+    android:icon="@drawable/icon_add"
+    android:orderInCategory="3"
+    tools:ignore="MenuTitle" />
+
+    <item
+        android:id="@+id/navigation_library"
+        android:icon="@drawable/icon_subscribe"
+        android:title="@string/title_library"
+        android:orderInCategory="4"/>
+
+    <item
+        android:id="@+id/navigation_download"
+        android:icon="@drawable/icon_user"
+        android:title="@string/title_download"
+        android:orderInCategory="5"/>
+
+
+</menu>
